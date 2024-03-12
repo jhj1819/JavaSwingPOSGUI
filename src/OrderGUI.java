@@ -29,27 +29,29 @@ public class OrderGUI extends JFrame implements ActionListener, MouseListener {
     static String dbTableName = "ItemTable_202058043";
     static String[] dbFieldName = {"menu","price"}; //변경시바꿔줘야... 수량은 가져오는게 아니지..
     Connection con = null;
-
+    //String
     String orderBtnText[] = {"주문","취소","선택취소","모두담기"}; //아래 버튼
     String orderItemName[] = {"메뉴","가격","개수"}; 	//테이블 타이틀
-
+    //JPanel
     JPanel menuBtnPanel = new JPanel();
     JPanel orderPanel = new JPanel() ;
-
+    //JButton
     JButton[] menuBtn;
     JButton[] orderBtn = new JButton[orderBtnText.length];
-    TitledBorder menuTitle;
 
+    TitledBorder menuTitle;
     JTable order_table;
     Vector order_header = new Vector();
     Vector<Vector> order_data = new Vector();
     DefaultTableModel order_model;
 
-    //
+    //JTextField
     JTextField priceTf = new JTextField(10);
-    int selectedRow;
+
+    //JLabel
     JLabel priceLabel = new JLabel("금액: ");
-    //
+
+    int selectedRow;
     PreparedStatement pstmt;
     ResultSet result;
 

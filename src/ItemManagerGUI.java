@@ -70,13 +70,20 @@ public class ItemManagerGUI extends JFrame implements MouseListener, ActionListe
     private ResultSet result;
     public static Vector data = new Vector();
     private Vector<String> title = new Vector<String>();
-    static String[] dbFieldName = {"menu","price","barcode","count"};
-    JPanel panelLow = new JPanel();
+
+
     int[] tfSize = {10,10,10,12};
     JTextField[] tf = new JTextField[dbFieldName.length];
+    //JLabel
     JLabel[] label = new JLabel[dbFieldName.length];
+    //JPanel
+    JPanel panelLow = new JPanel();
+    //String
+    static String[] dbFieldName = {"menu","price","barcode","count"};
     String[] btnText = {"삽입", "삭제", "수정", "Clear","POS","Dev."};
+    //JButton
     JButton[] btn = new JButton[btnText.length];
+
 
     public ItemManagerGUI() {
         this.setTitle("POS : Item Manager!!! 202058043 컴퓨터공학부 정한준");
